@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CallActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Call a Friend"
+        android:textSize="50sp"
+        android:textColor="#F44336"
+        android:textStyle="bold"
+        android:layout_margin="10dp"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your user id is : "
+        android:textStyle="normal"
+        android:textColor="#7B52F8"
+        android:layout_margin="10dp"
+        android:textSize="30sp"
+        android:id="@+id/nameTv"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        >
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint="User id"
+        android:id="@+id/frndIdEt"
+        android:paddingHorizontal="12dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@id/voiceCallBtn"
+        android:background="@drawable/rounded_corners"/>
+
+
+
+        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/voiceCallBtn"
+            android:layout_toLeftOf="@id/videoCallBtn"
+            android:layout_marginHorizontal="10dp"/>
+
+
+
+        <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/videoCallBtn"
+            android:layout_alignParentEnd="true"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
